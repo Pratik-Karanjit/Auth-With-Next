@@ -1,5 +1,9 @@
-import Header from "@/components/Header";
+import { GetMyData } from "@/components/GetData";
 
 export default async function Home() {
-  return <div>Main Page</div>;
+  return (
+    <>
+      <GetMyData />
+    </>
+  );
 }
