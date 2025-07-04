@@ -1,9 +1,11 @@
 "use client";
 
 import api from "@/app/lib/axios";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 export default function Login() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -30,6 +32,10 @@ export default function Login() {
         { credentials: "include" }
       );
       console.log("response", response);
+
+      if (response.status === 200) {
+        router.push("/"); // Redirect to home page on successful login
+      }
     } catch (error) {
       console.log("error", error);
     }
