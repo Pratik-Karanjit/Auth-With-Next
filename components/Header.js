@@ -19,9 +19,9 @@ export default function Header() {
         </strong>
         <strong
           className="cursor-pointer"
-          onClick={() => router.push("/others")}
+          onClick={() => router.push("/adminOps")}
         >
-          Others
+          Admin Ops
         </strong>
       </div>
     </div>
